@@ -1,0 +1,7 @@
+{
+  "name": "petesList",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
