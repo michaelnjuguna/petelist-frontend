@@ -1,4 +1,64 @@
-<ion-header [translucent]="true">
+<!-- menu contents -->
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end">
+        <ion-menu-toggle>
+          <ion-icon class="toolbar-icon" name="close"></ion-icon>
+        </ion-menu-toggle>
+      </ion-buttons>
+      <ion-title>{{getTime()}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-item href="https://peteslist-f0e47.web.app/" lines="none">
+      <ion-icon name="globe" slot="start" color="primary"></ion-icon>
+      <ion-label>Website</ion-label>
+    </ion-item>
+    <!-- TODO ADD COMPANY TELEPHONE -->
+    <ion-item lines="none" href="tel:0796371360">
+      <ion-icon name="call" slot="start" color="primary"></ion-icon>
+      <ion-label>Call Us</ion-label>
+    </ion-item>
+    <!-- TODO Add company email -->
+    <ion-item lines="none" href="mailto:michaelnjuguna184@gmail.com">
+      <ion-icon name="mail" slot="start" color="primary"></ion-icon>
+      <ion-label>E-mail Us</ion-label>
+    </ion-item>
+    <!-- edit profile router -->
+    <ion-item button detail="true" color="primary" lines="none" class="toolbar-btns">
+      <ion-label>Edit Profile</ion-label>
+    </ion-item>
+    <!-- share app -->
+    <ion-item button detail="true" color="primary" lines="none" class="toolbar-btns">
+      <ion-label>Share App </ion-label>
+    </ion-item>
+    <!-- logout -->
+    <ion-item button detail="true" color="primary" lines="none" class="toolbar-btns">
+      <ion-label>Log Out</ion-label>
+    </ion-item>
+    <!-- delete account -->
+    <ion-item button detail="true" color="danger" lines="none" class="toolbar-btns">
+      <ion-label>Delete Account</ion-label>
+    </ion-item>
+  </ion-content>
+</ion-menu>
+
+<!-- home component -->
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    Tap the button in the toolbar to open the menu.
+  </ion-content>
+</div>
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Blank
@@ -17,4 +77,4 @@
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
-</ion-content>
+</ion-content> -->
