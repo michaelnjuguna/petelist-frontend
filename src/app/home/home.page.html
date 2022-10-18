@@ -10,7 +10,7 @@
       <ion-title>{{getTime()}}</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding" class="toolbar-content" >
+  <ion-content class="ion-padding" class="toolbar-content">
     <ion-item href="https://peteslist-f0e47.web.app/" lines="none">
       <ion-icon name="globe" slot="start" color="primary"></ion-icon>
       <ion-label>Website</ion-label>
@@ -26,19 +26,45 @@
       <ion-label>E-mail Us</ion-label>
     </ion-item>
     <!-- edit profile router -->
-    <ion-item button detail="true" color="primary" lines="none" class="toolbar-btns">
+    <ion-item
+      routerLink="/edit-profile"
+      router-direction="forward"
+      detail="true"
+      color="primary"
+      lines="none"
+      class="toolbar-btns"
+    >
       <ion-label>Edit Profile</ion-label>
     </ion-item>
     <!-- share app -->
-    <ion-item button detail="true" color="primary" lines="none" class="toolbar-btns">
+    <ion-item
+      button
+      detail="true"
+      color="primary"
+      lines="none"
+      class="toolbar-btns"
+    >
       <ion-label>Share App </ion-label>
     </ion-item>
     <!-- logout -->
-    <ion-item button detail="true" color="primary" lines="none" class="toolbar-btns">
+    <ion-item
+      button
+      detail="true"
+      color="primary"
+      lines="none"
+      class="toolbar-btns"
+    >
       <ion-label>Log Out</ion-label>
     </ion-item>
     <!-- delete account -->
-    <ion-item button detail="true" color="danger" lines="none" class="toolbar-btns">
+    <ion-item
+      routerLink="/delete-user"
+      router-direction="forward"
+      detail="true"
+      color="danger"
+      lines="none"
+      class="toolbar-btns"
+    >
       <ion-label>Delete Account</ion-label>
     </ion-item>
   </ion-content>
@@ -51,11 +77,36 @@
       <ion-buttons slot="end">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Home</ion-title>
+      <ion-title>Jobs</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
-    Tap the button in the toolbar to open the menu.
+  <ion-content [fullscreen]="true">
+    <!-- search bar -->
+    <ion-searchbar
+      color="light"
+      animated="true"
+      placeholder="Search jobs"
+    ></ion-searchbar>
+    <!-- job cards -->
+    <ion-card color="light">
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more,
+        nothing less.
+      </ion-card-content>
+
+      <ion-item button detail="true" color="primary" lines="none">
+        <ion-label>Apply</ion-label>
+      </ion-item>
+    </ion-card>
+    <!-- floating action button -->
+    <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+      <ion-fab-button routerLink="/create-post">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
   </ion-content>
 </div>
 <!-- <ion-header [translucent]="true">
