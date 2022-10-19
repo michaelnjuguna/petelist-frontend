@@ -1,0 +1,6 @@
+@mixin input-styles{
+    border-width: 3px;
+    border-style: solid;
+    border-color: $primaryColor;
+    border-radius:$mainRadius;
+}

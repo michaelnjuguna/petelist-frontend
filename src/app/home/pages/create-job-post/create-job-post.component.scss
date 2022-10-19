@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+.job-back__btn {
+  .icon {
+    font-size: 1rem;
+    transform: translateX(2rem);
+  }
+}
+.job-input{
+    @include input-styles;
+}
+.job-input--description{
+    @include input-styles;
+    margin-block: 1rem;  
+}
+.job-input{
+    @include input-styles;
+}
+
+.job-btn{
+    border-radius: $mainRadius;
+    margin-top: 1rem;
+}

@@ -1,3 +1,45 @@
-<p>
+<!-- <p>
   create-job-post works!
-</p>
+</p> -->
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <!-- redirects to home -->
+    <ion-item
+      routerLink="/home"
+      router-direction="root"
+      color="primary"
+      detail="false"
+      slot="end"
+      class="job-back__btn"
+    >
+      <ion-icon
+        name="chevron-back-outline"
+        slot="start"
+        class="icon"
+      ></ion-icon>
+      <ion-label>Back</ion-label>
+    </ion-item>
+    <ion-title>New Post</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" fullscreen="true">
+  <ion-list >
+    <ion-item lines="none" color="light" class="job-input">
+      <ion-label position="floating">Job Title</ion-label>
+      <!-- TODO Add required size of letters -->
+      <ion-input spellcheck="true" [clearInput]="true" autofocus="true"  color="dark"></ion-input>
+    </ion-item>
+    <ion-item lines="none" color="light" class="job-input--description">
+      <ion-label position="floating">Job Description</ion-label>
+      <!-- TODO Add required size of letters -->
+      <ion-textarea spellcheck="true" required="true" rows="7" [autoGrow]="true"  color="dark"></ion-textarea>
+    </ion-item>
+    <ion-item class="job-input" color="light" lines="none">
+      <ion-label position="floating" >Email</ion-label>
+      <ion-input   type="email" [clearInput]="true" placeholder="email@domain.com" color="dark"></ion-input>
+    </ion-item>
+    <ion-item button detail="true"  color="primary" lines="none" class="job-btn">
+      <ion-label>Post</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
