@@ -21,3 +21,9 @@
     border-radius: $mainRadius;
     margin-top: 1rem;
 }
+.post-container{
+  background-color: transparent;
+  p{
+    color:$dangerColor;
+  }
+}
