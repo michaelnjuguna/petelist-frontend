@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { HomePageRoutingModule } from './home-routing.module';
 import { HomePage } from './home.page';
 import { CreateJobPostComponent } from './pages/create-job-post/create-job-post.component';
-
-import { HomePageRoutingModule } from './home-routing.module';
+import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 
 
 @NgModule({
@@ -15,6 +15,6 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,CreateJobPostComponent]
+  declarations: [HomePage,CreateJobPostComponent,EditProfileComponent]
 })
 export class HomePageModule {}

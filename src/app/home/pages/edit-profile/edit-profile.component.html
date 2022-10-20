@@ -1,3 +1,38 @@
-<p>
+<!-- <p>
   edit-profile works!
-</p>
+</p> -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-item
+      routerLink="/home"
+      router-direction="root"
+      color="primary"
+      detail="false"
+      slot="end"
+      class="profile-back__btn"
+    >
+      <ion-icon
+        name="chevron-back-outline"
+        slot="start"
+        class="icon"
+      ></ion-icon>
+      <ion-label>Back</ion-label>
+    </ion-item>
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list class="profile-container">
+    <h2>Are you an employer ?</h2>
+    <ion-radio-group [allowEmptySelection]="false" value="Yes" class="radio-group">
+      <ion-item >
+        <ion-label >Yes</ion-label>
+        <ion-radio  slot="start" color="primary" value="yes"></ion-radio>
+      </ion-item>
+      <ion-item >
+        <ion-label>No</ion-label>
+        <ion-radio  slot="start" color="primary" value="No"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+</ion-content>

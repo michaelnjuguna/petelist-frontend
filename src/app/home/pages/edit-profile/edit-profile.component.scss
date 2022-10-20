@@ -1,0 +1,20 @@
+.profile-back__btn {
+  .icon {
+    font-size: 1rem;
+    transform: translateX(2rem);
+  }
+}
+
+.profile-container {
+  background-color: transparent;
+  ion-radio {
+    --border-radius: 4px;
+    --inner-border-radius: 4px;
+
+    --color: #ddd;
+    --color-checked: #6815ec;
+  }
+  .radio-input {
+    background-color: transparent;
+  }
+}

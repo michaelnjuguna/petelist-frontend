@@ -1,12 +1,19 @@
 @import "../../../styles/variables";
 @import "../../../styles/mixins";
+
 .job-back__btn {
   .icon {
     font-size: 1rem;
     transform: translateX(2rem);
   }
 }
-.job-input{
+.post-container{
+  background-color: transparent;
+  p{
+    color:$dangerColor;
+  }
+  
+  .job-input{
     @include input-styles;
 }
 .job-input--description{
@@ -21,9 +28,4 @@
     border-radius: $mainRadius;
     margin-top: 1rem;
 }
-.post-container{
-  background-color: transparent;
-  p{
-    color:$dangerColor;
-  }
 }
