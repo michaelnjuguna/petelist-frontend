@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { File } from '@ionic-native/file/ngx';
 @Component({
   selector: 'app-edit-profile',
   templateUrl: './edit-profile.component.html',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private file:File) { }
+
 
   ngOnInit() {}
 

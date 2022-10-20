@@ -24,7 +24,7 @@
 </ion-header>
 <ion-content class="ion-padding" fullscreen="true">
   <ion-list class="post-container">
-    <p>! A job post once created cannot be edited or deleted</p>
+    <p class="warning">! A job post once created cannot be edited or deleted</p>
     <ion-item lines="none" color="light" class="job-input">
       <ion-label position="floating">Job Title</ion-label>
       <!-- TODO Add required size of letters -->
@@ -35,6 +35,7 @@
       <!-- TODO Add required size of letters -->
       <ion-textarea spellcheck="true" required="true" rows="7" [autoGrow]="true"  color="dark"></ion-textarea>
     </ion-item>
+    <p>You will receive applicants info at this email address</p>
     <ion-item class="job-input" color="light" lines="none">
       <ion-label position="floating" >Email</ion-label>
       <ion-input   type="email" [clearInput]="true" placeholder="email@domain.com" color="dark"></ion-input>

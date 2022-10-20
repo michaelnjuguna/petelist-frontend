@@ -4,4 +4,10 @@
 @import "global.page.scss";
 @import "toolbar.scss";
 
-
+.jobs-header{
+    z-index: 10;
+}
+.search-bar__header{
+    z-index: 5;
+    transform: translateY(-1rem);
+}

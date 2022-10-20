@@ -1,3 +1,5 @@
+@import "../../../styles/variables";
+
 .profile-back__btn {
   .icon {
     font-size: 1rem;
@@ -16,5 +18,9 @@
   }
   .radio-input {
     background-color: transparent;
+  }
+  .edit-profile__btn{
+    border-radius: $mainRadius;
+    margin-top: 1rem;
   }
 }
