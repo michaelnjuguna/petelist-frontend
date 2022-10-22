@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  authentication = true;
+  authentication = false;
   constructor(private router: Router) {
     if (this.authentication === false) {
     this.router.navigate(['new-user']);
