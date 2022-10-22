@@ -6,7 +6,6 @@ import { SignupComponent } from './home/pages/signup/signup.component';
 import { EditProfileComponent } from './home/pages/edit-profile/edit-profile.component';
 import { CreateJobPostComponent } from './home/pages/create-job-post/create-job-post.component';
 import { DeleteUserComponent } from './home/pages/delete-user/delete-user.component';
-import { ErrorComponent } from './home/pages/error/error.component';
 import { NewUserComponent } from './home/pages/new-user/new-user.component';
 const routes: Routes = [
   {

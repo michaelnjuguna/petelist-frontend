@@ -3,8 +3,7 @@
 
 .job-back__btn {
   .icon {
-    font-size: 1rem;
-    transform: translateX(2rem);
+  @include back-icon;
   }
 }
 .post-container{
