@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { CreateJobPostComponent } from './pages/create-job-post/create-job-post.component';
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 import {DeleteUserComponent}from './pages/delete-user/delete-user.component';
+import {NewUserComponent}from './pages/new-user/new-user.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,7 @@ import {DeleteUserComponent}from './pages/delete-user/delete-user.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,CreateJobPostComponent,EditProfileComponent,DeleteUserComponent]
+  declarations: [HomePage,CreateJobPostComponent,EditProfileComponent,DeleteUserComponent,NewUserComponent]
 })
 export class HomePageModule {}
 

@@ -21,7 +21,10 @@ const routes: Routes = [
   // after signup
   {path:'delete-user',component:DeleteUserComponent},
 {path:'edit-profile',component:EditProfileComponent},
-{path:'create-post',component:CreateJobPostComponent}
+{path:'create-post',component:CreateJobPostComponent},
+{path:'new-user',component:NewUserComponent},
+{path:'Login',component:LoginComponent},
+{path:'signup',component:SignupComponent},
 ];
 
 @NgModule({

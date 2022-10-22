@@ -1,3 +1,18 @@
-<p>
-  new-user works!
-</p>
+<!-- <ion-header>
+  <ion-toolbar class="ion-no-border" color="primary">
+    <ion-title>Welcome</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content class="ion-padding" color="primary">
+  <h1 >Welcome to PetesList</h1>
+  <h3 >Do you have an account already ?</h3>
+  <ion-item class="new-user__btn" button (click)="renderLogin()"  detail="true" color="light">
+    <ion-label color="dark">Login</ion-label>
+  </ion-item>
+  <h3>
+    Are you a new user ?
+  </h3>
+  <ion-item class="new-user__btn" (click)="renderSignUp()" button detail="true" color="light">
+    <ion-label color="dark">Signup</ion-label>
+  </ion-item>
+</ion-content>
