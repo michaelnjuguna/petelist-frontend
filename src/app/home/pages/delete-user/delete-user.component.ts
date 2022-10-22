@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delete-user.component.scss'],
 })
 export class DeleteUserComponent implements OnInit {
-
+//* status bar color is danger
   constructor() { }
 
   ngOnInit() {}

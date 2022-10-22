@@ -1,3 +1,48 @@
-<p>
-  delete-user works!
-</p>
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-item
+      routerLink="/home"
+      router-direction="root"
+      color="danger"
+      detail="false"
+      slot="end"
+      class="delete-back__btn"
+    >
+      <ion-icon
+        name="chevron-back-outline"
+        slot="start"
+        class="icon"
+      ></ion-icon>
+      <ion-label>Back</ion-label>
+    </ion-item>
+    <ion-title>Delete </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <h3>Are you sure you want to delete your account?</h3>
+  <ion-list class="delete-content">
+    <ion-radio-group class="radio-group">
+      <ion-item lines="none">
+        <ion-label>Yes</ion-label>
+        <ion-radio slot="start" value="yes" color="danger"></ion-radio>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label>No</ion-label>
+        <ion-radio slot="start" value="No" color="primary"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <h3>Please tell us why you are deleting your account</h3>
+    <ion-item lines="none" color="light" class="delete-acc__reason">
+      <ion-textarea
+        spellcheck="true"
+        placeholder="Type something here"
+        rows="7"
+        [autoGrow]="true"
+      ></ion-textarea>
+    </ion-item>
+    <!-- delete button -->
+    <ion-item lines="none " color="danger" detail="true" button class="actual-del__btn">
+      <ion-label>Delete Account</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

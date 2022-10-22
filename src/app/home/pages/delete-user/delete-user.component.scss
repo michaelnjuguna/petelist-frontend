@@ -1,0 +1,26 @@
+@import "../../../styles/variables";
+.delete-back__btn {
+  .icon {
+    font-size: 1rem;
+    transform: translateX(2rem);
+  }
+}
+.delete-content {
+  background-color: transparent;
+  .radio-group {
+    margin-block: 2rem;
+    ion-radio {
+      --border-radius: 4px;
+      --inner-border-radius: 4px;
+
+      --color: #ddd;
+      --color-checked: #6815ec;
+    }
+  }
+  .delete-acc__reason{
+    margin-bottom: 1rem;
+  }
+  .actual-del__btn{
+    border-radius: $mainRadius;
+  }
+}
