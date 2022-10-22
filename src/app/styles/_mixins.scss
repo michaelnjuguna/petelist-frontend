@@ -1,6 +1,11 @@
-@mixin input-styles{
-    border-width: 3px;
-    border-style: solid;
-    border-color: $primaryColor;
-    border-radius:$mainRadius;
+@mixin input-styles {
+  border-width: 3px;
+  border-style: solid;
+  border-color: $primaryColor;
+  border-radius: $mainRadius;
+}
+
+@mixin back-icon {
+  font-size: 1rem;
+  transform: translateX(2rem);
 }

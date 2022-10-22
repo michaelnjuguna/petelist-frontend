@@ -1,3 +1,45 @@
-<p>
-  login works!
-</p>
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <!-- redirects to home -->
+    <ion-item
+      routerLink="/new-user"
+      router-direction="root"
+      color="primary"
+      detail="false"
+      slot="end"
+      class="login-back__btn"
+    >
+      <ion-icon
+        name="chevron-back-outline"
+        slot="start"
+        class="icon"
+      ></ion-icon>
+      <ion-label>Back</ion-label>
+    </ion-item>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" color="light">
+  <ion-list>
+    <ion-item class="login-btns" color="danger" detail="true" button>
+      <ion-label>Login with Google</ion-label>
+      <ion-icon  name="logo-google" slot="start" ></ion-icon>
+    </ion-item>
+    <ion-item class="login-btns" color="tertiary" detail="true" button>
+      <ion-label>Login with Facebook</ion-label>
+      <ion-icon  name="logo-facebook" slot="start" ></ion-icon>
+    </ion-item>
+    <ion-item class="login-btns" color="primary" detail="true" button>
+      <ion-label>Login with Linkedin</ion-label>
+      <ion-icon  name="logo-linkedin" slot="start" ></ion-icon>
+    </ion-item>
+    <ion-item class="login-btns" color="secondary" detail="true" button>
+      <ion-label>Login with Twitter</ion-label>
+      <ion-icon  name="logo-twitter" slot="start" ></ion-icon>
+    </ion-item>
+  </ion-list>
+  <h3>Are you a new user? Signup instead.</h3>
+  <ion-item class="login-signup__btn" color="primary" routerLink="/signup" detail="true">
+    <ion-label>Signup</ion-label>
+  </ion-item>
+</ion-content>

@@ -8,7 +8,7 @@ import { CreateJobPostComponent } from './pages/create-job-post/create-job-post.
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 import {DeleteUserComponent}from './pages/delete-user/delete-user.component';
 import {NewUserComponent}from './pages/new-user/new-user.component';
-
+import { LoginComponent } from './pages/login/login.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +16,7 @@ import {NewUserComponent}from './pages/new-user/new-user.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,CreateJobPostComponent,EditProfileComponent,DeleteUserComponent,NewUserComponent]
+  declarations: [HomePage,CreateJobPostComponent,EditProfileComponent,DeleteUserComponent,NewUserComponent, LoginComponent]
 })
 export class HomePageModule {}
 
