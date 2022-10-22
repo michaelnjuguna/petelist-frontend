@@ -1,0 +1,15 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+.signup-back__btn{
+    .icon{
+        @include back-icon;
+        }
+}
+.signup-btns{
+    border-radius: $mainRadius;
+    margin-bottom: 1.4rem;
+}
+.signup-login__btn{
+    border-radius: $mainRadius;
+    
+}

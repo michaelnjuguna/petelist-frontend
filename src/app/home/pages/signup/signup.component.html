@@ -1,3 +1,46 @@
-<p>
-  signup works!
-</p>
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <!-- redirects to home -->
+    <ion-item
+      routerLink="/new-user"
+      router-direction="root"
+      color="primary"
+      detail="false"
+      slot="end"
+      class="signup-back__btn"
+    >
+      <ion-icon
+        name="chevron-back-outline"
+        slot="start"
+        class="icon"
+      ></ion-icon>
+      <ion-label>Back</ion-label>
+    </ion-item>
+    <ion-title>Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" color="light">
+  <p>By signing up you agree with our <a color="primary" href="http://">terms and Conditions</a></p>
+  <ion-list>
+    <ion-item class="signup-btns" color="danger" detail="true" button>
+      <ion-label>Signup with Google</ion-label>
+      <ion-icon  name="logo-google" slot="start" ></ion-icon>
+    </ion-item>
+    <ion-item class="signup-btns" color="tertiary" detail="true" button>
+      <ion-label>Signup with Facebook</ion-label>
+      <ion-icon  name="logo-facebook" slot="start" ></ion-icon>
+    </ion-item>
+    <ion-item class="signup-btns" color="primary" detail="true" button>
+      <ion-label>Signup with Linkedin</ion-label>
+      <ion-icon  name="logo-linkedin" slot="start" ></ion-icon>
+    </ion-item>
+    <ion-item class="signup-btns" color="secondary" detail="true" button>
+      <ion-label>Signup with Twitter</ion-label>
+      <ion-icon  name="logo-twitter" slot="start" ></ion-icon>
+    </ion-item>
+  </ion-list>
+  <h3>Do you have an account already?. Login instead.</h3>
+  <ion-item class="signup-login__btn" color="primary" routerLink="/Login" detail="true">
+    <ion-label>Login Here</ion-label>
+  </ion-item>
+</ion-content>
