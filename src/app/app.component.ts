@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   authentication = false;
-  constructor(private router: Router) {
+  constructor(private router:Router)  {
     if (this.authentication === false) {
-    this.router.navigate(['new-user']);
-    }else{
-      this.router.navigate(['home'])
-    }
+      this.router.navigate(['new-user']);
+      }else if(this.authentication === true) {
+        this.router.navigate(['home'])
+      }
   }
 }
