@@ -20,11 +20,12 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding" color="light">
+  <!-- TODO: add the correct terms and conditions website -->
   <p class="terms">By signing up you agree with our <a color="primary" href="https://peteslist-terms-and-conditions.netlify.app/">terms and Conditions</a></p>
   <ion-list>
-    <ion-item class="signup-btns" color="danger" detail="true" button>
+    <ion-item class="signup-btns" color="danger" detail="true" button (click)="signUpGoogle()">
       <ion-label>Signup with Google</ion-label>
-      <ion-icon  name="logo-google" slot="start" ></ion-icon>
+      <ion-icon  name="logo-google" slot="start"></ion-icon>
     </ion-item>
     <ion-item class="signup-btns" color="fb" detail="true" button>
       <ion-label>Signup with Facebook</ion-label>

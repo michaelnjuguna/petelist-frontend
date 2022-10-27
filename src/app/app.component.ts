@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  // use angular guards
   authentication = false;
   constructor(private router:Router)  {
     if (this.authentication === false) {
