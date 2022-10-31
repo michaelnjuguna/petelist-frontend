@@ -7,6 +7,7 @@ import { EditProfileComponent } from './home/pages/edit-profile/edit-profile.com
 import { CreateJobPostComponent } from './home/pages/create-job-post/create-job-post.component';
 import { DeleteUserComponent } from './home/pages/delete-user/delete-user.component';
 import { NewUserComponent } from './home/pages/new-user/new-user.component';
+import { ForgotPasswordComponent } from './home/pages/forgot-password/forgot-password.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -24,6 +25,7 @@ const routes: Routes = [
 {path:'new-user',component:NewUserComponent},
 {path:'Login',component:LoginComponent},
 {path:'signup',component:SignupComponent},
+{path:'forgot-password',component:ForgotPasswordComponent}
 ];
 
 @NgModule({

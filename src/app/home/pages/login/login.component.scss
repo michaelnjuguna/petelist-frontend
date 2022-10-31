@@ -1,17 +1,32 @@
-
 @import "../../../styles/variables";
 @import "../../../styles/mixins";
-.login-back__btn{
-    .icon{
+.login-back__btn {
+  .icon {
     @include back-icon;
-    }
+  }
 }
 
-.login-btns{
+.login-details {
+  background-color: transparent;
+  .login-btn {
     border-radius: $mainRadius;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .login-input {
+    // @include input-styles;
+    margin-block: 1rem;
+  }
 }
-.login-signup__btn{
-    border-radius: $mainRadius;
-    
+.login-controls {
+    background-color: transparent;
+  .login-link {
+    // background-color: transparent;
+    // border-bottom: solid;
+    // color: $primaryColor;
+    // width: 3px;
+    text-decoration: underline;
+    text-decoration-color: $primaryColor;
+    text-decoration-thickness: 3px;
+  }
+
 }
