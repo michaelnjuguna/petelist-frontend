@@ -21,27 +21,95 @@
 </ion-header>
 <ion-content class="ion-padding" color="light">
   <!-- TODO: add the correct terms and conditions website -->
-  <p class="terms">By signing up you agree with our <a color="primary" href="https://peteslist-terms-and-conditions.netlify.app/">terms and Conditions</a></p>
-  <ion-list>
-    <ion-item class="signup-btns" color="danger" detail="true" button (click)="signUpGoogle()">
-      <ion-label>Signup with Google</ion-label>
-      <ion-icon  name="logo-google" slot="start"></ion-icon>
+  <p class="terms">
+    By signing up you agree with our
+    <a
+      color="primary"
+      href="https://peteslist-terms-and-conditions.netlify.app/"
+      >terms and Conditions</a
+    >
+  </p>
+  <ion-list class="signup-container">
+    <ion-item fill="outline" class="signup-inputs" color="primary">
+      <ion-label position="floating">First name</ion-label>
+      <ion-input
+        placeholder="First name"
+        type="text"
+        inputmode="text"
+        minlength="3"
+  ngModel
+      ></ion-input>
+      <ion-note slot="error">Invalid name</ion-note>
     </ion-item>
-    <ion-item class="signup-btns" color="fb" detail="true" button>
-      <ion-label>Signup with Facebook</ion-label>
-      <ion-icon  name="logo-facebook" slot="start" ></ion-icon>
+    <ion-item fill="outline" class="signup-inputs" color="primary">
+      <ion-label position="floating">Second name</ion-label>
+      <ion-input
+        placeholder="Second name"
+        type="text"
+        inputmode="text"
+        minlength="3"
+  ngModel
+      ></ion-input>
+      <ion-note slot="error">Invalid name</ion-note>
     </ion-item>
-    <ion-item class="signup-btns" color="primary" detail="true" button>
-      <ion-label>Signup with Linkedin</ion-label>
-      <ion-icon  name="logo-linkedin" slot="start" ></ion-icon>
+    <ion-item fill="outline" class="signup-inputs" color="primary">
+      <ion-label position="floating">Your email</ion-label>
+      <ion-input
+        placeholder="email@domain.com"
+        type="email"
+        inputmode="text"
+        ngModel
+        email
+      ></ion-input>
+      <ion-note slot="error">Invalid email</ion-note>
     </ion-item>
-    <ion-item class="signup-btns" color="secondary" detail="true" button>
-      <ion-label>Signup with Twitter</ion-label>
-      <ion-icon  name="logo-twitter" slot="start" ></ion-icon>
+    <ion-item fill="outline" class="signup-inputs">
+      <ion-label position="floating">Phone number</ion-label>
+      <ion-input
+        [clearOnEdit]="true"
+        placeholder="+254..."
+        type="tel"
+        inputmode="number"
+        ngModel
+        tel
+        minlength="10"
+      ></ion-input>
+      <ion-note slot="error">Invalid number</ion-note>
+    </ion-item>
+    <ion-item fill="outline" class="signup-inputs">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input
+        [clearOnEdit]="true"
+        type="password"
+        ngModel
+        tel
+        minlength="8"
+      ></ion-input>
+      <ion-note slot="error">Invalid password</ion-note>
+    </ion-item>
+    <ion-item fill="outline" class="signup-inputs">
+      <ion-label position="floating">Confirm password</ion-label>
+      <ion-input
+        [clearOnEdit]="true"
+        type="password"
+        inputmode="password"
+        ngModel
+        tel
+        minlength="8"
+      ></ion-input>
+      <ion-note slot="error">Invalid password</ion-note>
+    </ion-item>
+    <!-- login btn -->
+    <ion-item button detail="true" color="primary" class="signup-btn">
+      <ion-label>Signup</ion-label>
     </ion-item>
   </ion-list>
-  <h3>Do you have an account already?. Login instead.</h3>
-  <ion-item class="signup-login__btn" color="primary" routerLink="/Login" detail="true">
-    <ion-label>Login Here</ion-label>
+  <h3>Do you have an account already?.</h3>
+  <ion-item
+    class="signup-login__btn"
+    color="light"
+    routerLink="/Login"
+  >
+    <ion-label color="primary" class="label">Login instead</ion-label>
   </ion-item>
 </ion-content>

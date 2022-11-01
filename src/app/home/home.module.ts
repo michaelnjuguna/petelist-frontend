@@ -10,6 +10,7 @@ import {DeleteUserComponent}from './pages/delete-user/delete-user.component';
 import {NewUserComponent}from './pages/new-user/new-user.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +18,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,CreateJobPostComponent,EditProfileComponent,DeleteUserComponent,NewUserComponent, LoginComponent,SignupComponent]
+  declarations: [HomePage,CreateJobPostComponent,EditProfileComponent,DeleteUserComponent,NewUserComponent, LoginComponent,SignupComponent,ForgotPasswordComponent]
 })
 export class HomePageModule {}
 

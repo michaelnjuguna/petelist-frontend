@@ -5,17 +5,29 @@
     @include back-icon;
   }
 }
-.signup-btns {
-  border-radius: $mainRadius;
-  margin-bottom: 1.4rem;
-}
+
 .signup-login__btn {
   border-radius: $mainRadius;
+  .label{
+    text-decoration: underline;
+    text-decoration-color: $primaryColor;
+    text-decoration-thickness: 3px;
+  }
 }
 .terms {
   // color:$primaryColor;
   font-size: 1.2rem;
   a {
     color: $primaryColor;
+  }
+}
+.signup-container {
+  background-color: transparent;
+  .signup-inputs{
+    margin-block: 1rem;
+  }
+  .signup-btn {
+    border-radius: $mainRadius;
+    margin-bottom: 1.4rem;
   }
 }
