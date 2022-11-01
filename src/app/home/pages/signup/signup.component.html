@@ -37,7 +37,8 @@
         type="text"
         inputmode="text"
         minlength="3"
-  ngModel
+        ngModel
+        #firstName
       ></ion-input>
       <ion-note slot="error">Invalid name</ion-note>
     </ion-item>
@@ -48,7 +49,8 @@
         type="text"
         inputmode="text"
         minlength="3"
-  ngModel
+        ngModel
+        #secondName
       ></ion-input>
       <ion-note slot="error">Invalid name</ion-note>
     </ion-item>
@@ -60,6 +62,7 @@
         inputmode="text"
         ngModel
         email
+        #email
       ></ion-input>
       <ion-note slot="error">Invalid email</ion-note>
     </ion-item>
@@ -73,6 +76,7 @@
         ngModel
         tel
         minlength="10"
+        #phoneNumber
       ></ion-input>
       <ion-note slot="error">Invalid number</ion-note>
     </ion-item>
@@ -84,6 +88,7 @@
         ngModel
         tel
         minlength="8"
+        #password
       ></ion-input>
       <ion-note slot="error">Invalid password</ion-note>
     </ion-item>
@@ -96,20 +101,23 @@
         ngModel
         tel
         minlength="8"
+        #confirmPassword
       ></ion-input>
       <ion-note slot="error">Invalid password</ion-note>
     </ion-item>
-    <!-- login btn -->
-    <ion-item button detail="true" color="primary" class="signup-btn">
+    <!-- signup btn -->
+    <ion-item
+      (click)="signUp(firstName.value,secondName.value,email.value,phoneNumber.value,password.value,confirmPassword.value)"
+      button
+      detail="true"
+      color="primary"
+      class="signup-btn"
+    >
       <ion-label>Signup</ion-label>
     </ion-item>
   </ion-list>
   <h3>Do you have an account already?.</h3>
-  <ion-item
-    class="signup-login__btn"
-    color="light"
-    routerLink="/Login"
-  >
+  <ion-item class="signup-login__btn" color="light" routerLink="/Login">
     <ion-label color="primary" class="label">Login instead</ion-label>
   </ion-item>
 </ion-content>
