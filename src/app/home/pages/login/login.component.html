@@ -30,6 +30,7 @@
         placeholder="email@domain.com"
         ngModel
         email
+        #loginEmail
       ></ion-input>
       <ion-note slot="error">Invalid email</ion-note>
     </ion-item>
@@ -43,10 +44,11 @@
         password
         min="8"
         minlength="8"
+        #loginPassword
       ></ion-input>
       <ion-note slot="error">Invalid password</ion-note>
     </ion-item>
-    <ion-item button color="primary" detail="true" class="login-btn">
+    <ion-item (click)="login(loginEmail.value,loginPassword.value)" button color="primary" detail="true" class="login-btn">
       <ion-label>Login</ion-label>
     </ion-item>
   </ion-list>
