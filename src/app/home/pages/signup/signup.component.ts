@@ -17,26 +17,33 @@ export class SignupComponent implements OnInit {
   pNumber = '';
   password = '';
   confirmPassword = '';
-  dataVerified = false;
+  dataVerified:boolean = false;
   constructor(
     private http: HttpClient,
-    private alertController: AlertController,
-    
+    private alertController: AlertController
   ) {}
-  async signUp(firstName, secondName, email, phoneNumber, password, confirmPassword) {
+  async signUp(
+    firstName,
+    secondName,
+    email,
+    phoneNumber,
+    password,
+    confirmPassword
+  ) {
     this.fName = firstName;
     this.sName = secondName;
     this.email = email;
     this.pNumber = phoneNumber;
     this.password = password;
     this.confirmPassword = confirmPassword;
+    
     // checks is user is online
-    if(navigator.onLine){
-    this.verifyData();
-    if(this.dataVerified === true){
-      this.sendData();
-    }}
-    else {
+    if (navigator.onLine) {
+      this.verifyData();
+      if (this.dataVerified === true) {
+        this.sendData();
+      }
+    } else {
       const alert = await this.alertController.create({
         header: 'You are offline',
         message: 'Go back online and try again',
@@ -46,55 +53,79 @@ export class SignupComponent implements OnInit {
     }
   }
   async verifyData() {
-    if (this.fName == '' || this.sName == '') {
+    if (
+      this.fName == '' ||
+      this.sName == '' ||
+      this.fName.length < 3 ||
+      this.sName.length < 3
+    ) {
       const alert = await this.alertController.create({
         header: 'Invalid name',
-        message: 'Name field cannot be empty!',
+        message: 'Name field is empty or your entry is too short.',
         buttons: ['OK'],
       });
       await alert.present();
-    } else if (this.email == '') {
+      return "invalid name";
+    } else if (this.email == '' ) {
+      this.dataVerified = false;
       const alert = await this.alertController.create({
         header: 'Invalid email',
-        message: 'email field cannot be empty!',
+        message: 'Enter a valid email address!',
         buttons: ['OK'],
       });
       await alert.present();
-    } else if (this.pNumber == '') {
+      return "invalid email";
+    } else if (this.pNumber == '' || this.pNumber.length < 10) {
+      this.dataVerified = false;
       const alert = await this.alertController.create({
         header: 'Invalid phone number',
-        message: 'Phone number field cannot be empty!',
+        message: 'Phone number field cannot be empty or is too short! ',
         buttons: ['OK'],
       });
       await alert.present();
-    } else if (this.password == '' || this.confirmPassword == '') {
+      return "invalid phone number"
+    } else if (
+      this.password == '' ||
+      this.confirmPassword == '' ||
+      this.password.length < 8
+    ) {
+      this.dataVerified = false;
       const alert = await this.alertController.create({
         header: 'Invalid password',
         message: 'Password field cannot be empty!',
         buttons: ['OK'],
       });
       await alert.present();
+      return "invalid password"
     } else if (this.password !== this.confirmPassword) {
+      this.dataVerified = false;
       const alert = await this.alertController.create({
         header: 'Invalid password',
         message: 'Passwords do not match,confirm your password!',
         buttons: ['OK'],
       });
       await alert.present();
+      return "invalid password";
     } else {
       this.dataVerified = true;
+      return "valid data"
     }
   }
   sendData() {
     this.http
-      .post(this.url + 'signup', { fname: this.fName, sname: this.sName, email: this.email, phoneNumber: this.pNumber, password: this.password})
+      .post(this.url + 'signup', {
+        fname: this.fName,
+        sname: this.sName,
+        email: this.email,
+        phoneNumber: this.pNumber,
+        password: this.password,
+      })
       .subscribe((response) => {
-        if(response == "signed up"){
+        if (response == 'signed up') {
           alert(response);
-        }else {
-          alert("No response")
+        } else {
+          alert('No response');
         }
-        
       });
   }
   ngOnInit() {}
