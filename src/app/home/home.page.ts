@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['global.page.scss', 'home.page.scss'],
 })
 export class HomePage {
+  jobs:any;
   url = 'http://localhost:3000/';
   constructor(private http: HttpClient) {
     this.getTime();
@@ -19,6 +20,8 @@ export class HomePage {
         .get(this.url)
         .pipe(map((res) => res))
         .subscribe((response) => {
+          this.jobs=response;
+          console.log(this.jobs);
           console.log(response);
         });
     }

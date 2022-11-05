@@ -16,19 +16,30 @@ export class CreateJobPostComponent implements OnInit {
     private router: Router
   ) {}
 
- async createJobPost(jobTitle, jobDescription, jobEmail) {
-    let jobData = {
-      jobTitle,
-      jobDescription,
-      jobEmail,
-    };
-    if (navigator.onLine) {
-      this.http.post(this.url + 'jobs', jobData).pipe(map(res=>res)).subscribe(response=>{
-        if (response=== "Successful"){
-          this.router.navigate(['home']);
-
-        }
-      })
+  async createJobPost(jobTitle, jobDescription, jobEmail) {
+    if (jobTitle.length < 5 || jobDescription.length < 10) {
+      const alert = await this.alertController.create({
+        header: 'Invalid information',
+        message: 'Your job title or description is too short',
+        buttons: ['OK'],
+      });
+      await alert.present();
+    } else {
+      let jobData = {
+        jobTitle,
+        jobDescription,
+        jobEmail,
+      };
+      if (navigator.onLine) {
+        this.http
+          .post(this.url + 'jobs', jobData)
+          .pipe(map((res) => res))
+          .subscribe((response) => {
+            if (response === 'Successful') {
+              this.router.navigate(['home']);
+            }
+          });
+      }
     }
   }
   ngOnInit() {}

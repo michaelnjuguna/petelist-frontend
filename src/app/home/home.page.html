@@ -92,15 +92,15 @@
   <ion-content [fullscreen]="true">
 
     <!-- job cards -->
-    <ion-card color="light">
+
+    <ion-card color="light" *ngFor="let job of jobs">
       <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-title>{{job.title}}</ion-card-title>
         <!-- TODO: Add posted date -->
-        <ion-card-subtitle>Date posted: 19/10/2022</ion-card-subtitle>
+        <ion-card-subtitle>Date posted: {{job.time}}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        Here's a small text description for the card content. Nothing more,
-        nothing less.
+        {{job.description}}
       </ion-card-content>
 
       <ion-item button detail="true" color="primary" lines="none">

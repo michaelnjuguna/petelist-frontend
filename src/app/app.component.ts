@@ -10,7 +10,8 @@ import { CapacitorCookies } from '@capacitor/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  // use angular guards
+  //TODO use angular guards
+  //TODO use cookies
   authentication = false;
   url = 'http://localhost:3000/';
   constructor(
