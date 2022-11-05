@@ -1,16 +1,28 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['global.page.scss', 'home.page.scss'],
 })
 export class HomePage {
-  
-  constructor() {
-    
+  url = 'http://localhost:3000/';
+  constructor(private http: HttpClient) {
     this.getTime();
+    this.getJobs();
   }
 
+  getJobs() {
+    if (navigator.onLine) {
+      this.http
+        .get(this.url)
+        .pipe(map((res) => res))
+        .subscribe((response) => {
+          console.log(response);
+        });
+    }
+  }
   getTime() {
     let time = new Date();
     let hour = time.getHours();
@@ -22,5 +34,4 @@ export class HomePage {
       return 'Good Evening';
     }
   }
-  
 }

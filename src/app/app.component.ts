@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { AlertController } from '@ionic/angular';
+import { CapacitorCookies } from '@capacitor/core';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
