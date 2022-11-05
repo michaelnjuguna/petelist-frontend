@@ -4,7 +4,12 @@ const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'petesList',
   webDir: 'www',
-  bundledWebRuntime: false
+  bundledWebRuntime: false,
+  plugins: {
+    CapacitorCookies: {
+      enabled: true,
+    },
+  },
 };
 
 export default config;

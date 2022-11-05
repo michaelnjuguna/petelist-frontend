@@ -4,6 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { AlertController } from '@ionic/angular';
+import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { CapacitorCookies } from '@capacitor/core';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -20,7 +23,8 @@ export class SignupComponent implements OnInit {
   dataVerified:boolean = false;
   constructor(
     private http: HttpClient,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private router: Router,
   ) {}
   async signUp(
     firstName,
@@ -112,21 +116,41 @@ export class SignupComponent implements OnInit {
     }
   }
   sendData() {
+    let data = {
+      fname: this.fName,
+      sname: this.sName,
+      email: this.email,
+      phoneNumber: this.pNumber,
+      password: this.password,
+    }
     this.http
-      .post(this.url + 'signup', {
-        fname: this.fName,
-        sname: this.sName,
-        email: this.email,
-        phoneNumber: this.pNumber,
-        password: this.password,
-      })
+      .post(this.url + 'signup', data)
       .subscribe((response) => {
-        if (response == 'signed up') {
-          alert(response);
-        } else {
-          alert('No response');
+        if(response ==="Signed successfully") {
+          async ()=>{
+            const alert = await this.alertController.create({
+              header: 'Successfully signed up',
+              buttons: ['OK'],
+            });
+            await alert.present();
+          }
+          this.router.navigate(['home']);
+        }else if(response ==="Already logged in") {
+          async ()=>{
+            const alert = await this.alertController.create({
+              header: 'You are already signed in',
+              message: 'Log in to continue!',
+              buttons: ['OK'],
+            });
+            await alert.present();
+          }
+          console.log("Not successful")
         }
+       console.log("Post response:",response)
       });
+  }
+  createCookie(){
+
   }
   ngOnInit() {}
 }
