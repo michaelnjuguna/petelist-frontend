@@ -19,6 +19,6 @@ export class AppComponent {
     private http: HttpClient,
     private alertController: AlertController
   ) {
-    this.router.navigate(["Login"])
+    this.router.navigate(["new-user"])
   }
 }
