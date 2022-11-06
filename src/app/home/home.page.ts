@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -9,11 +10,13 @@ import { map } from 'rxjs/operators';
 export class HomePage {
   jobs:any;
   url = 'http://localhost:3000/';
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,  private router: Router,) {
     this.getTime();
     this.getJobs();
   }
-
+logout(){
+  this.router.navigate(["Login"])
+}
   getJobs() {
     if (navigator.onLine) {
       this.http

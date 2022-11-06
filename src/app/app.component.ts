@@ -19,31 +19,6 @@ export class AppComponent {
     private http: HttpClient,
     private alertController: AlertController
   ) {
-    this.authUser();
-  }
-
-  async authUser() {
-    if (navigator.onLine) {
-      this.http
-        .get(this.url + 'posts')
-        .pipe(map((res) => res))
-        .subscribe((response) => {
-          console.log('GET Response:', response);
-          if (response === 'authenticated') {
-            this.router.navigate(['home']);
-            this.authentication = true;
-          } else if (response === 'not authenticated') {
-            this.authentication = false;
-            this.router.navigate(['new-user']);
-          }
-        });
-    } else {
-      const alert = await this.alertController.create({
-        header: 'You are offline',
-        message: 'Go back online and try again',
-        buttons: ['OK'],
-      });
-      await alert.present();
-    }
+    this.router.navigate(["Login"])
   }
 }
