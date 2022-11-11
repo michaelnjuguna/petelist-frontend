@@ -144,9 +144,9 @@ export class SignupComponent implements OnInit {
             });
             await alert.present();
           }
-          console.log("Not successful")
+          // console.log("Not successful")
         }
-       console.log("Post response:",response)
+      //  console.log("Post response:",response)
       });
   }
   createCookie(){

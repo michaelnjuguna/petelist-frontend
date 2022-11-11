@@ -26,7 +26,7 @@ export class DeleteUserComponent implements OnInit {
           if(response === "deleted successfully") {
             this.router.navigate(['signup']);
           }
-          console.log(response);
+          // console.log(response);
         });
     }else{
       const alert = await this.alertController.create({

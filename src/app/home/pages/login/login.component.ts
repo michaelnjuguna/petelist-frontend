@@ -71,12 +71,12 @@ export class LoginComponent implements OnInit {
       .post(this.url + 'login', loginData)
       .pipe(map((res) => res))
       .subscribe(async (response) => {
-        console.log(response);
+        // console.log(response);
         if (response === 'Login success') {
           this.router.navigate(['home']);
         }else {
           serverResponse = response;
-            console.log("Invalid")
+            // console.log("Invalid")
             const alert = await this.alertController.create({
               header: 'Invalid details ',
               message: 'Your password is incorrect.',

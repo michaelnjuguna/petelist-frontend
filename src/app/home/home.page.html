@@ -81,8 +81,8 @@
       <ion-title>Jobs</ion-title>
     </ion-toolbar>
   </ion-header>
-  <!-- search bar -->
-  <ion-header class="ion-no-border search-bar__header"
+  <!--TODO add search bar -->
+  <!-- <ion-header class="ion-no-border search-bar__header"
     ><ion-toolbar color="light">
       <ion-searchbar
         color="light"
@@ -90,7 +90,7 @@
         placeholder="Search jobs"
         class="jobs-search__bar"
       ></ion-searchbar> </ion-toolbar
-  ></ion-header>
+  ></ion-header> -->
   <ion-content [fullscreen]="true">
     <!-- job cards -->
 
@@ -110,36 +110,8 @@
         <ion-label>Apply</ion-label>
       </ion-item>
     </ion-card>
-    <ion-card color="light">
-      <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-        <!-- TODO: Add posted date -->
-        <ion-card-subtitle>Date posted: 19/10/2022</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more,
-        nothing less.
-      </ion-card-content>
 
-      <ion-item button detail="true" color="primary" lines="none">
-        <ion-label>Apply</ion-label>
-      </ion-item>
-    </ion-card>
-    <ion-card color="light">
-      <ion-card-header>
-        <ion-card-title>Card Title</ion-card-title>
-        <!-- TODO: Add posted date -->
-        <ion-card-subtitle>Date posted: 19/10/2022</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more,
-        nothing less.
-      </ion-card-content>
-
-      <ion-item button detail="true" color="primary" lines="none">
-        <ion-label>Apply</ion-label>
-      </ion-item>
-    </ion-card>
+  
     <!-- floating action button -->
     <ion-fab vertical="bottom" horizontal="start" slot="fixed">
       <ion-fab-button routerLink="/create-post" router-direction="forward">

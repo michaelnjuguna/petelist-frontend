@@ -25,8 +25,8 @@ logout(){
         .pipe(map((res) => res))
         .subscribe((response) => {
           this.jobs=response;
-          console.log(this.jobs);
-          console.log(response);
+          // console.log(this.jobs);
+          // console.log(response);
         });
     }
   }

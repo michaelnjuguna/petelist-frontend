@@ -40,7 +40,7 @@ export class ForgotPasswordComponent implements OnInit {
           if(response==="updated password"){
             this.router.navigate(['Login']);
           }
-          console.log(response)
+          // console.log(response)
         })
       } else {
         const alert = await this.alertController.create({
