@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  url = 'http://localhost:3000/';
+  url = 'https://peteslist.onrender.com/';
   loginMail: string = '';
   loginWord: string = '';
   verifiedLoginData: boolean = false;

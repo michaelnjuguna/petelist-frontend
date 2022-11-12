@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgot-password.component.scss'],
 })
 export class ForgotPasswordComponent implements OnInit {
-  url = 'http://localhost:3000/';
+  url = 'https://peteslist.onrender.com/';
   constructor(
     private alertController: AlertController,
     private http: HttpClient,

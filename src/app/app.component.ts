@@ -18,7 +18,7 @@ export class AppComponent {
   //TODO use angular guards
   //TODO use cookies
   authentication = false;
-  url = 'http://localhost:3000/';
+  url = 'https://peteslist.onrender.com/';
   constructor(
     private router: Router,
     private http: HttpClient,

@@ -9,7 +9,7 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./create-job-post.component.scss'],
 })
 export class CreateJobPostComponent implements OnInit {
-  url = 'http://localhost:3000/';
+  url = 'https://peteslist.onrender.com/';
   constructor(
     private http: HttpClient,
     private alertController: AlertController,

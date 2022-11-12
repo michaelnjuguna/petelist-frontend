@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./delete-user.component.scss'],
 })
 export class DeleteUserComponent implements OnInit {
-  url = 'http://localhost:3000/';
+  url = 'https://peteslist.onrender.com/';
   //* status bar color is danger
   constructor(
     private http: HttpClient,

@@ -10,7 +10,7 @@ import { Share } from '@capacitor/share';
 })
 export class HomePage {
   jobs:any;
-  url = 'http://localhost:3000/';
+  url = 'https://peteslist.onrender.com/';
   constructor(private http: HttpClient,  private router: Router,) {
     this.getTime();
     this.getJobs();
