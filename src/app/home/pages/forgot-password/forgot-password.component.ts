@@ -3,12 +3,17 @@ import { AlertController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { StatusBar, Style } from '@capacitor/status-bar';
 @Component({
   selector: 'app-forgot-password',
   templateUrl: './forgot-password.component.html',
   styleUrls: ['./forgot-password.component.scss'],
 })
 export class ForgotPasswordComponent implements OnInit {
+  primaryColor="#3880ff";
+  statusBar(){
+    StatusBar.setBackgroundColor({color:this.primaryColor})
+  }
   url = 'https://peteslist.onrender.com/';
   constructor(
     private alertController: AlertController,

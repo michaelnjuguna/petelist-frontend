@@ -3,12 +3,17 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Share } from '@capacitor/share';
+import { StatusBar, Style } from '@capacitor/status-bar';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['global.page.scss', 'home.page.scss'],
 })
 export class HomePage {
+  primaryColor="#3880ff";
+  statusBar(){
+    StatusBar.setBackgroundColor({color:this.primaryColor})
+  }
   jobs:any;
   url = 'https://peteslist.onrender.com/';
   constructor(private http: HttpClient,  private router: Router,) {
